@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Node from "./components/node";
 import { Fragment, useEffect, useState } from "react";
@@ -41,7 +40,7 @@ function App() {
 
   const randomWeight = () => {
     let weight = Math.floor(Math.random() * 20) / 20;
-    return weight == 0 ? 0.05 : weight;
+    return weight === 0 ? 0.05 : weight;
   };
 
   const round2Decimal = (num) => {
@@ -139,8 +138,8 @@ function App() {
         }
       }
     }
-    setNodeData(nodeDataCopy);
     // Update the nodeData
+    setNodeData(nodeDataCopy);
     // Update the current index
     if (currentIndex === data.length - 1) {
       setCurrentEpoch(currentEpoch + 1);
